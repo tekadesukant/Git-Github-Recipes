@@ -5,9 +5,9 @@ REM Check if running as administrator
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo.
-    echo ============================
-    echo Please run this script as an administrator.
-    echo ============================
+    echo ==============================================
+    echo Please run this script as an administrator.  |
+    echo ==============================================
     echo.
     pause
     timeout /t 10 /nobreak >nul
@@ -18,9 +18,9 @@ REM Enable delayed expansion
 setlocal enabledelayedexpansion
 
 echo.
-echo ============================
-echo Git Installation Script
-echo ============================
+echo =====================================================
+echo Git Automation Installation Script by TekadeSukant. |
+echo =====================================================
 echo.
 
 REM Check if winget is installed
@@ -36,13 +36,17 @@ if not exist "%ProgramFiles%\WindowsApps\Microsoft.DesktopAppInstaller_*.msixbun
 
 REM Install Git using winget
 echo.
-echo [INFO] Installing Git...
+echo ===========================
+echo [INFO] Installing Git...  |
+echo ===========================
 echo.
 
 winget install --id Git.Git -e --source winget
 
 echo.
-echo [INFO] Git installation completed successfully!
+echo ==================================================
+echo [INFO] Git installation completed successfully!  |
+echo ==================================================
 echo.
 
 REM Pause to allow the user to see the final message
